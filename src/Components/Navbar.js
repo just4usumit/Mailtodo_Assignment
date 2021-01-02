@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from './../FrontendAssets/logo.svg'
 import logo2 from './../FrontendAssets/profile.svg'
-const navbar = () => {
+const Navbar = () => {
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
             
@@ -39,12 +39,12 @@ const navbar = () => {
     </ul>
     
   </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
   </button>
   
 </nav>
     )
 }
 
-export default navbar
+export default Navbar

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const counter = ({
+const Counter = ({
     type,
     count = 0,
     selected = false
@@ -19,4 +19,4 @@ const counter = ({
 }
 
 
-export default counter
+export default Counter
