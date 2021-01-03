@@ -80,9 +80,13 @@ import warehouse from './../FrontendAssets/warehouse.svg'
                             {   
 
 
-                                (items[0]['scan']).map((sitem, index)=>{
+                                (itemsd[5]['scan']).map((sitem, index)=>{
+                                    let colorli = "list-group-item small m-1 ml-4 font-weight-bold"
+                                    if(sitem['status_detail'] === "DELIVERED"){
+                                        colorli+=" text-success"
+                                    }
                                     return(
-                                        <li className="list-group-item small m-1 ml-4">{sitem['status_detail']}  
+                                        <li key={index} className={colorli}>{sitem['status_detail']}  
                                         <span className="float-right">
                                         {sitem['time']}
                                         </span>              
@@ -145,9 +149,8 @@ import warehouse from './../FrontendAssets/warehouse.svg'
                             <td>{item.from}</td>
                             <td>{item.to}</td>
                             <td>{item.brand || "USPA"}</td>
-                            {/* <td>{item.pickup_date}</td> */}
-                            <td>NA</td>
-                            <td>{"NA"}</td>
+                            <td>{item.pickup_date.substring(0,10)}</td>
+                            <td>{item['extra_fields']['expected_delivery_date'].substring(0,10)}</td>
                             <td className={color} >{d}</td>
                         </tr>
                         )
